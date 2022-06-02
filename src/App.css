@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+#root,html,body{
+    margin: 0px;
+    padding: 0px;
+}
+.card{
+    border: 2px solid rgba(118, 119, 118,2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(118, 119, 118,0.8);
+    height: 150px;
+    width: 450px;
+    border-radius: 20px;
+}
+.main{
+    background: url('https://c0.wallpaperflare.com/preview/546/793/162/aesthetics-grunge-vintage-retro.jpg') no-repeat center/cover ;
+    height: 100vh;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.advice{
+    padding: 2px;
+    margin: 20px;
+}
+button{
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 50px;
+    width: 150px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(118, 119, 118,2);
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.7px;
+    box-shadow: 4px 4px rgba(118, 119, 118,2);
+}
+button:hover{
+    animation: rotate 0.7s ease-in-out both ;
+}
+button:hover span{
+    animation: storm 0.7s ease-in-out both ;
+    
+    animation-delay: 0.6s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  } 
+  @media (max-width: 500px) { 
+    .card{
+        width: 250px;
+        height:125px;
+        font-size: 13px;
+    }
+    button{
+        
+        height: 35px;
+        width: 100px;
+    }
+    span{
+        font-size: 10px;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
